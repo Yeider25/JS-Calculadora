@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilo.css">
+    <title>Calculadora de matrices</title>
+</head>
+<body>
+    <h1>Calculadora de Matrices</h1>
+    <div class="container">
+        <div class="controles">
+            <label for="tamaño-matriz">Tamaño de la Matriz:</label>
+            <select id="tamaño-matriz">
+                <option value="1">1x1</option>
+                <option value="2">2x2</option>
+                <option value="3">3x3</option>
+                <option value="4">4x4</option>
+                <option value="5">5x5</option>
+                <option value="6">6x6</option>
+                <option value="7">7x7</option>
+            </select>
+            <button onclick="generarMatriz('matrizA')">Generar Matriz A</button>
+            <button onclick="generarMatriz('matrizB')">Generar Matriz B</button>
+        </div>
+        <div class="matriz" id="matrizA"></div>
+        <div class="matriz" id="matrizB"></div>
+        <div class="controles">
+            <label for="operacion">Operación:</label>
+            <select id="operacion">
+                <option value="sumar">Sumar</option>
+                <option value="restar">Restar</option>
+                <option value="multiplicar">Multiplicar</option>
+            </select>
+            <button onclick="rellenarCeldasVacias()">Rellenar Celdas Vacías</button>
+            <button onclick="limpiarMatriz()">Limpiar</button>
+            <button onclick="calcular()">Calcular</button>
+        </div>
+        <div id="resultado"></div>
+    </div>
+    <script src="index.js"></script> 
+</body>
+</html>
